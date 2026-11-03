@@ -13,8 +13,15 @@
     />
     <style>
       /* ===== BASE ===== */
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
       body {
         font-family: "Jost", sans-serif;
         font-weight: 300;
@@ -22,123 +29,332 @@
         background: #f8f5f0;
         color: #1c1c1c;
       }
-      a { text-decoration: none; color: inherit; }
-      ul { list-style: none; }
-      h1, h2, h3, .logo { font-family: "Cormorant Garamond", Georgia, serif; }
-      h2 { font-size: 3.2rem; line-height: 1.1; font-weight: 400; margin-bottom: 20px; }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+      }
+      h1,
+      h2,
+      h3,
+      .logo {
+        font-family: "Cormorant Garamond", Georgia, serif;
+      }
+      h2 {
+        font-size: 3.2rem;
+        line-height: 1.1;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
       .eyebrow {
-        text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem;
-        margin-bottom: 15px; color: #8a6d3b;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+        color: #8a6d3b;
       }
 
       /* ===== NAVBAR ===== */
       header {
-        position: sticky; top: 0; z-index: 10; padding: 20px 6%;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        padding: 20px 6%;
         background: rgba(248, 245, 240, 0.95);
       }
-      nav { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
-      .logo { font-size: 1.8rem; font-weight: bold; letter-spacing: 3px; }
-      nav ul { display: flex; gap: 30px; }
-      nav ul a { font-size: 0.95rem; }
-      .nav-cta { padding: 10px 20px; border: 1px solid #1c1c1c; border-radius: 4px; transition: 0.3s; }
-      .nav-cta:hover { background: #1c1c1c; color: white; }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+      }
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        letter-spacing: 3px;
+      }
+      nav ul {
+        display: flex;
+        gap: 30px;
+      }
+      nav ul a {
+        font-size: 0.95rem;
+      }
+      .nav-cta {
+        padding: 10px 20px;
+        border: 1px solid #1c1c1c;
+        border-radius: 4px;
+        transition: 0.3s;
+      }
+      .nav-cta:hover {
+        background: #1c1c1c;
+        color: white;
+      }
 
       /* ===== HERO ===== */
       .hero {
-        min-height: 80vh; display: flex; align-items: center; justify-content: center;
-        text-align: center; padding: 80px 6%; color: white;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 6%;
+        color: white;
         /* Pour une photo : remplacer par url("images/hero.jpg") */
         background-color: #2b2622;
         background-image:
-          radial-gradient(circle at 70% 30%, rgba(212, 180, 131, 0.25), transparent 55%),
+          radial-gradient(
+            circle at 70% 30%,
+            rgba(212, 180, 131, 0.25),
+            transparent 55%
+          ),
           linear-gradient(135deg, #2b2622, #1c1c1c);
       }
-      .hero-content { max-width: 800px; animation: fadeUp 1.2s ease both; }
-      .hero .eyebrow { color: #d4b483; }
-      .hero h1 { font-size: 5rem; line-height: 1.05; margin-bottom: 25px; font-weight: 400; }
-      .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; }
-      .hero-buttons { display: flex; justify-content: center; gap: 15px; }
-      .hero-buttons a { padding: 14px 28px; border: 1px solid white; transition: 0.3s; }
-      .hero-buttons a:first-child { background: white; color: #1c1c1c; }
-      .hero-buttons a:hover { background: #1c1c1c; color: white; }
+      .hero-content {
+        max-width: 800px;
+        animation: fadeUp 1.2s ease both;
+      }
+      .hero .eyebrow {
+        color: #d4b483;
+      }
+      .hero h1 {
+        font-size: 5rem;
+        line-height: 1.05;
+        margin-bottom: 25px;
+        font-weight: 400;
+      }
+      .hero p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 30px;
+      }
+      .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+      .hero-buttons a {
+        padding: 14px 28px;
+        border: 1px solid white;
+        transition: 0.3s;
+      }
+      .hero-buttons a:first-child {
+        background: white;
+        color: #1c1c1c;
+      }
+      .hero-buttons a:hover {
+        background: #1c1c1c;
+        color: white;
+      }
       @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: none; }
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
       }
 
       /* ===== EXPERIENCE ===== */
-      #experience, #menu, #contact {
-        padding: 120px 6%; display: grid; grid-template-columns: 1fr 1fr;
-        gap: 80px; align-items: center;
+      #experience,
+      #menu,
+      #contact {
+        padding: 120px 6%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
       }
-      .experience-features { display: grid; gap: 30px; }
-      .experience-features article { border-top: 1px solid #1c1c1c; padding-top: 20px; }
-      .experience-features h3 { font-size: 1.2rem; margin-bottom: 8px; font-weight: 400; }
+      .experience-features {
+        display: grid;
+        gap: 30px;
+      }
+      .experience-features article {
+        border-top: 1px solid #1c1c1c;
+        padding-top: 20px;
+      }
+      .experience-features h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        font-weight: 400;
+      }
 
       /* ===== MENU ===== */
-      .menu-note { font-size: 0.85rem; opacity: 0.7; margin-top: 10px; }
-      .menu-category { margin-bottom: 30px; }
-      .menu-category h3 {
-        font-weight: 400; font-size: 1.2rem; border-bottom: 1px solid #1c1c1c;
-        padding-bottom: 8px; margin-bottom: 12px;
+      .menu-note {
+        font-size: 0.85rem;
+        opacity: 0.7;
+        margin-top: 10px;
       }
-      .menu-category li { display: flex; justify-content: space-between; gap: 20px; padding: 6px 0; }
+      .menu-category {
+        margin-bottom: 30px;
+      }
+      .menu-category h3 {
+        font-weight: 400;
+        font-size: 1.2rem;
+        border-bottom: 1px solid #1c1c1c;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+      }
+      .menu-category li {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 6px 0;
+      }
 
       /* ===== EVENTS ===== */
       #events {
-        min-height: 70vh; padding: 120px 6%; display: flex; align-items: center;
-        justify-content: center; text-align: center; background: #1c1c1c; color: white;
+        min-height: 70vh;
+        padding: 120px 6%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: #1c1c1c;
+        color: white;
       }
-      #events > div { max-width: 700px; }
-      #events h2 { font-size: 3.5rem; }
+      #events > div {
+        max-width: 700px;
+      }
+      #events h2 {
+        font-size: 3.5rem;
+      }
       #events a {
-        display: inline-block; margin-top: 25px; padding: 14px 28px;
-        border: 1px solid white; transition: 0.3s;
+        display: inline-block;
+        margin-top: 25px;
+        padding: 14px 28px;
+        border: 1px solid white;
+        transition: 0.3s;
       }
-      #events a:hover { background: white; color: #1c1c1c; }
+      #events a:hover {
+        background: white;
+        color: #1c1c1c;
+      }
 
       /* ===== ABOUT ===== */
-      #about { padding: 120px 6%; max-width: 900px; margin: 0 auto; text-align: center; }
+      #about {
+        padding: 120px 6%;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
 
       /* ===== RESERVATION ===== */
-      #reservation { padding: 120px 6%; background: #e9e2d8; text-align: center; }
-      #reservation > div { max-width: 700px; margin: 0 auto; }
-      #reservation h2 { font-size: 3.5rem; }
-      #reservation a {
-        display: inline-block; margin-top: 25px; padding: 14px 30px;
-        background: #1c1c1c; color: white; transition: 0.3s;
+      #reservation {
+        padding: 120px 6%;
+        background: #e9e2d8;
+        text-align: center;
       }
-      #reservation a:hover { background: #444; }
+      #reservation > div {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      #reservation h2 {
+        font-size: 3.5rem;
+      }
+      #reservation a {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 14px 30px;
+        background: #1c1c1c;
+        color: white;
+        transition: 0.3s;
+      }
+      #reservation a:hover {
+        background: #444;
+      }
 
       /* ===== CONTACT ===== */
-      .hours { margin: 20px 0; }
-      .hours p { margin-bottom: 4px; }
-      .location { height: 400px; background: #ddd5ca; }
-      .location iframe { display: block; border: 0; }
+      .hours {
+        margin: 20px 0;
+      }
+      .hours p {
+        margin-bottom: 4px;
+      }
+      .location {
+        height: 400px;
+        background: #ddd5ca;
+      }
+      .location iframe {
+        display: block;
+        border: 0;
+      }
       #contact a {
-        display: inline-block; margin-top: 20px; border-bottom: 1px solid #1c1c1c;
+        display: inline-block;
+        margin-top: 20px;
+        border-bottom: 1px solid #1c1c1c;
         padding-bottom: 5px;
       }
 
       /* ===== FOOTER ===== */
       footer {
-        padding: 60px 6%; background: #1c1c1c; color: white; display: flex;
-        flex-direction: column; align-items: center; text-align: center; gap: 24px;
+        padding: 60px 6%;
+        background: #1c1c1c;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
       }
-      footer p:last-child { font-size: 0.8rem; opacity: 0.7; }
+      footer p:last-child {
+        font-size: 0.8rem;
+        opacity: 0.7;
+      }
 
       /* ===== MOBILE ===== */
       @media (max-width: 768px) {
-        nav { flex-wrap: wrap; justify-content: center; row-gap: 14px; }
-        .logo { width: 100%; text-align: center; }
-        nav ul { width: 100%; justify-content: center; flex-wrap: wrap; row-gap: 10px; column-gap: 20px; }
-        .nav-cta { order: 3; }
-        .hero h1 { font-size: 2.8rem; }
-        #experience, #menu, #events, #about, #reservation, #contact { padding: 70px 6%; }
-        #experience, #menu, #contact { grid-template-columns: 1fr; gap: 40px; }
-        h2 { font-size: 2.2rem; }
-        #events h2, #reservation h2 { font-size: 2.5rem; }
-        .hero-buttons { flex-direction: column; align-items: center; }
+        nav {
+          flex-wrap: wrap;
+          justify-content: center;
+          row-gap: 14px;
+        }
+        .logo {
+          width: 100%;
+          text-align: center;
+        }
+        nav ul {
+          width: 100%;
+          justify-content: center;
+          flex-wrap: wrap;
+          row-gap: 10px;
+          column-gap: 20px;
+        }
+        .nav-cta {
+          order: 3;
+        }
+        .hero h1 {
+          font-size: 2.8rem;
+        }
+        #experience,
+        #menu,
+        #events,
+        #about,
+        #reservation,
+        #contact {
+          padding: 70px 6%;
+        }
+        #experience,
+        #menu,
+        #contact {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        h2 {
+          font-size: 2.2rem;
+        }
+        #events h2,
+        #reservation h2 {
+          font-size: 2.5rem;
+        }
+        .hero-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
       }
     </style>
   </head>
@@ -175,7 +391,9 @@
         <div>
           <p class="eyebrow">L’expérience</p>
           <h2>Plus qu’un restaurant.</h2>
-          <p>Un lieu où la cuisine, l’ambiance et la convivialité se rencontrent.</p>
+          <p>
+            Un lieu où la cuisine, l’ambiance et la convivialité se rencontrent.
+          </p>
         </div>
         <div class="experience-features">
           <article>
@@ -188,7 +406,10 @@
           </article>
           <article>
             <h3>Les moments</h3>
-            <p>Un espace adapté aux repas entre amis comme aux rendez-vous professionnels.</p>
+            <p>
+              Un espace adapté aux repas entre amis comme aux rendez-vous
+              professionnels.
+            </p>
           </article>
         </div>
       </section>
@@ -197,7 +418,10 @@
         <div>
           <p class="eyebrow">La carte</p>
           <h2>Une carte qui donne envie.</h2>
-          <p>Vos plats, vos boissons et vos prix, toujours à jour et accessibles depuis un téléphone.</p>
+          <p>
+            Vos plats, vos boissons et vos prix, toujours à jour et accessibles
+            depuis un téléphone.
+          </p>
           <p class="menu-note">Exemple de carte, à remplacer par la vôtre.</p>
         </div>
         <div class="menu-highlight">
@@ -205,21 +429,30 @@
             <h3>Entrées</h3>
             <ul>
               <li><span>Salade de crevettes</span><span>6 000 FCFA</span></li>
-              <li><span>Velouté de légumes du jour</span><span>5 000 FCFA</span></li>
+              <li>
+                <span>Velouté de légumes du jour</span><span>5 000 FCFA</span>
+              </li>
             </ul>
           </div>
           <div class="menu-category">
             <h3>Plats</h3>
             <ul>
-              <li><span>Poulet braisé, attiéké</span><span>8 000 FCFA</span></li>
-              <li><span>Poisson grillé, sauce du chef</span><span>12 000 FCFA</span></li>
+              <li>
+                <span>Poulet braisé, attiéké</span><span>8 000 FCFA</span>
+              </li>
+              <li>
+                <span>Poisson grillé, sauce du chef</span
+                ><span>12 000 FCFA</span>
+              </li>
             </ul>
           </div>
           <div class="menu-category">
             <h3>Desserts</h3>
             <ul>
               <li><span>Fondant au chocolat</span><span>4 500 FCFA</span></li>
-              <li><span>Salade de fruits frais</span><span>3 500 FCFA</span></li>
+              <li>
+                <span>Salade de fruits frais</span><span>3 500 FCFA</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -229,7 +462,10 @@
         <div>
           <p class="eyebrow">Vos événements</p>
           <h2>Un cadre pour vos moments importants.</h2>
-          <p>Anniversaires, dîners en groupe, déjeuners professionnels et soirées privées.</p>
+          <p>
+            Anniversaires, dîners en groupe, déjeuners professionnels et soirées
+            privées.
+          </p>
           <a href="#contact">Nous contacter</a>
         </div>
       </section>
@@ -238,7 +474,10 @@
         <div>
           <p class="eyebrow">À propos</p>
           <h2>Bienvenue.</h2>
-          <p>Ici, vous présentez votre histoire, votre équipe et ce qui rend votre établissement unique, en quelques lignes.</p>
+          <p>
+            Ici, vous présentez votre histoire, votre équipe et ce qui rend
+            votre établissement unique, en quelques lignes.
+          </p>
         </div>
       </section>
 
@@ -246,9 +485,15 @@
         <div>
           <p class="eyebrow">Réservation</p>
           <h2>Votre table vous attend.</h2>
-          <p>Un clic, et votre client vous écrit directement sur WhatsApp, avec son message déjà prêt.</p>
-          <!-- Remplacer 225XXXXXXXXXX par le numéro WhatsApp (indicatif 225, sans + ni espaces) -->
-          <a href="https://wa.me/225XXXXXXXXXX?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table.">Réserver sur WhatsApp</a>
+          <p>
+            Un clic, et votre client vous écrit directement sur WhatsApp, avec
+            son message déjà prêt.
+          </p>
+
+          <a
+            href="https://wa.me/2250546918383?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table."
+            >Réserver sur WhatsApp</a
+          >
         </div>
       </section>
 
@@ -283,7 +528,9 @@
         <p>VOTRE RESTAURANT</p>
         <p>Votre slogan ici.</p>
       </div>
-      <p>Maquette de démonstration · Site vitrine pour restaurants et lounges</p>
+      <p>
+        Maquette de démonstration · Site vitrine pour restaurants et lounges
+      </p>
     </footer>
   </body>
 </html>
